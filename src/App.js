@@ -1,6 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 
+import React from 'react';
+import Chatbot from './Chatbot';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>React Chatbot</h1>
+      <Chatbot />
+    </div>
+  );
+}
+
+
+/*
 function App() {
   return (
     <div className="App">
@@ -20,6 +34,6 @@ function App() {
       </header>
     </div>
   );
-}
+}*/
 
 export default App;
