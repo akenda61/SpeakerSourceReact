@@ -6,34 +6,14 @@ import Chatbot from './Chatbot';
 
 function App() {
   return (
-    <div className="App">
-      <h1>React Chatbot</h1>
-      <Chatbot />
-    </div>
+      <div>
+          <div className="top-banner">
+              <div className="banner-title">SpeakerSource</div>
+              <button className="login-button">Log In</button>
+          </div>
+          <Chatbot />
+      </div>
   );
 }
-
-
-/*
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}*/
 
 export default App;

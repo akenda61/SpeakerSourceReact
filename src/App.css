@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+/* App.css - Updated styles for your application */
+
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #2a2a2a; /* Dark grey background for the whole page */
+  color: #fff; /* White text color for better contrast */
+  height: 100%;
+  cursor: default; /* Set default cursor for the entire page */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Top banner styling */
+.top-banner {
+  background-color: #333; /* Darker shade for the banner */
+  color: #fff; /* White text color for the banner */
+  padding: 10px 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.banner-title {
+  font-size: 24px;
+  color: #fff; /* Ensure the title is white */
+}
+
+.login-button {
+  padding: 8px 16px;
+  background-color: #0d6efd;
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.login-button:hover {
+  background-color: #0a58ca;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Additional styles for other elements in your app can go here */
+/* Feel free to add or modify according to your app's needs */
