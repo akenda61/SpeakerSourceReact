@@ -1,0 +1,82 @@
+/* Chatbot.css - Styles for Chatbot component */
+
+/* Style for the chatbot layout */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    max-height: 95vh;
+    margin: 2vh auto;
+    padding: 0 2vw;
+    font-family: 'Arial', sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    background-color: #1e1e1e; /* Chatbot background color */
+}
+
+/* Chat messages area styling */
+.chat-messages {
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #1e1e1e; /* Same color as the chat container */
+}
+
+/* General message styling */
+.chat-messages p {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    line-height: 1.5;
+    color: #f0f0f0; /* Light text color for readability */
+}
+
+/* Styling for bot's messages */
+.sender-bot p {
+    background-color: #333333; /* Slightly lighter color for bot messages */
+}
+
+/* Styling for user's messages */
+.sender-you p {
+    text-align: right;
+    background-color: rgb(242, 8, 8); /* Distinct color for user's messages */
+}
+
+/* Input form styling */
+.input-form {
+    display: flex;
+    padding: 10px;
+    background-color: #1e1e1e;
+}
+
+.input-form input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 8px;
+    border: 1px solid #555;
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border-radius: 4px;
+    cursor: text; /* Set text cursor for the input field */
+}
+
+.input-form button {
+    padding: 10px 16px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input-form button:hover {
+    background-color: #0a58ca;
+}
+
+/* Loading message styling */
+.loading-message {
+    color: #888;
+    text-align: center;
+    margin-top: 10px;
+}
