@@ -67,23 +67,35 @@ const Chatbot = () => {
     }
   };
 
-    return (
-        <div className="chat-container">
-            <div className="chat-messages">
-                {messages.map((msg, index) => (
-                    // Correctly apply 'sender-you' or 'sender-bot' class based on the sender
-                    <p key={index} className={`message ${msg.sender === 'you' ? 'sender-you' : 'sender-bot'}`}>
-                        <strong>{msg.sender === 'you' ? 'You' : 'SpeakerSource'}: </strong>{msg.text}
-                    </p>
-                ))}
-                {isLoading && <p className="loading-message">Loading...</p>}
-            </div>
-            <form onSubmit={handleSubmit} className="input-form">
-                <input type="text" value={userInput} onChange={handleInputChange} disabled={isLoading} />
-                <button type="submit" disabled={isLoading}>Send</button>
-            </form>
-        </div>
-    );
+
+  const formatMessage = (message) => {
+    // Splitting the message by line breaks and wrapping each line in a span
+    return message.split('\n').map((line, index) => (
+      <span key={index}>
+        {line.split('**').reduce((prev, current, i) => i % 2 === 0 ? [...prev, current] : [...prev, <strong key={i}>{current}</strong>], [])}
+        {index < message.split('\n').length - 1 && <br />}
+      </span>
+    ));
+  };
+
+
+  return (
+    <div className="chat-container">
+      <div className="chat-messages">
+        {messages.map((msg, index) => (
+          <p key={index} className={`message ${msg.sender === 'you' ? 'sender-you' : 'sender-bot'}`}>
+            <strong>{msg.sender === 'you' ? 'You' : 'SpeakerSource'}: </strong>
+            {formatMessage(msg.text)}
+          </p>
+        ))}
+        {isLoading && <p className="loading-message">Loading...</p>}
+      </div>
+      <form onSubmit={handleSubmit} className="input-form">
+        <input type="text" value={userInput} onChange={handleInputChange} disabled={isLoading} />
+        <button type="submit" disabled={isLoading}>Send</button>
+      </form>
+    </div>
+  );
 
 
 };
