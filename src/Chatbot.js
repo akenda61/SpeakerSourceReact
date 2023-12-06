@@ -10,7 +10,7 @@ const Chatbot = () => {
   useEffect(() => {
     const fetchThreadId = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:80/start');
+        const response = await fetch('http://16.170.157.71/start');
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -46,7 +46,7 @@ const Chatbot = () => {
 
   const sendMessageToServer = async (message) => {
     try {
-      const response = await fetch('http://127.0.0.1:80/chat', {
+      const response = await fetch('http://16.170.157.71/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
